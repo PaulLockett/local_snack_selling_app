@@ -35,9 +35,51 @@ class _ProfileState extends State<Profile> {
                   ),
                 ],
               ),
-              Text('Name'),
-              Text('number'),
-              Text('location'),
+              SizedBox(
+                height: 10,
+              ),
+              Stack(
+                children: <Widget>[
+                  Container(
+                    width: 250,
+                    height: 250,
+                    decoration: BoxDecoration(
+                      color: Colors.orange,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(Icons.person, size: 200,),
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    left: 150,
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(Icons.add),
+                    ),
+                  ),
+                ]
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Enter your name'
+                ),
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Enter your Dorm'
+                ),
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Enter your number'
+                ),
+              ),
             ],
           ),
         ),
