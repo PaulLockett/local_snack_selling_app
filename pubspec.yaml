@@ -28,6 +28,7 @@ dependencies:
   cloud_firestore:
   firebase_auth:
   cloud_functions:
+  provider:
 
 
 dev_dependencies:

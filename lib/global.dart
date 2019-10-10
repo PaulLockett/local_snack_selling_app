@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 
 List<String> brands = ['Adidas', 'Nike', 'Reebook', 'Fila', 'Puma'];
 Color blue = Color(0xff2273cf), cyan = Color(0xff37d6ba);
-List<Map<dynamic, dynamic>> adidas_Products = [
+List<Map<dynamic, dynamic>> adidasProducts = [
   {
     'product_name': 'Skittles',
     'product_price': 1.00,
     'product_color': Color(0xffdfd9c9),
     'product_image':
-        'https://images.footlocker.com/is/image/EBFL2/O2424001?wid=1024&hei=1024&fmt=png-alphag'    
+        'https://images.footlocker.com/is/image/EBFL2/O2424001?wid=1024&hei=1024&fmt=png-alphag',
+    'amount_selected': 0.0  
   },
   {
     'product_name': 'Adidas Supernova St',
@@ -16,6 +17,7 @@ List<Map<dynamic, dynamic>> adidas_Products = [
     'product_color': Color(0xffcacaca),
     'product_image':
         'http://cdn.shopify.com/s/files/1/0129/6942/products/BB3104_FTW_photo_side-lateral_transparent_1024x1024.png?v=1558458694',
+    'amount_selected': 0.0 
   },
   {
     'product_name': 'Adidas Marquee Boost Low',
@@ -23,6 +25,7 @@ List<Map<dynamic, dynamic>> adidas_Products = [
     'product_color': Color(0xffd7b681),
     'product_image':
         'https://images.footlocker.com/is/image/EBFL2/D96932_a1?wid=1024&hei=1024&fmt=png-alpha',
+    'amount_selected': 0.0 
   },
   {
     'product_name': 'Adidas Adizero',
@@ -30,6 +33,7 @@ List<Map<dynamic, dynamic>> adidas_Products = [
     'product_color': Color(0xffdfd9c9),
     'product_image':
         'https://images.footlocker.com/is/image/EBFL2/O2424001?wid=1024&hei=1024&fmt=png-alpha',
+    'amount_selected': 0.0 
   },
   {
     'product_name': 'Adidas Supernova St',
@@ -37,6 +41,7 @@ List<Map<dynamic, dynamic>> adidas_Products = [
     'product_color': Color(0xffcacaca),
     'product_image':
         'http://cdn.shopify.com/s/files/1/0129/6942/products/BB3104_FTW_photo_side-lateral_transparent_1024x1024.png?v=1558458694',
+    'amount_selected': 0.0 
   },
   {
     'product_name': 'Adidas Marquee Boost Low',
@@ -44,6 +49,7 @@ List<Map<dynamic, dynamic>> adidas_Products = [
     'product_color': Color(0xffd7b681),
     'product_image':
         'https://images.footlocker.com/is/image/EBFL2/D96932_a1?wid=1024&hei=1024&fmt=png-alpha',
+    'amount_selected': 0.0 
   },
   {
     'product_name': 'Adidas Adizero',
@@ -51,6 +57,7 @@ List<Map<dynamic, dynamic>> adidas_Products = [
     'product_color': Color(0xffdfd9c9),
     'product_image':
         'https://images.footlocker.com/is/image/EBFL2/O2424001?wid=1024&hei=1024&fmt=png-alpha',
+    'amount_selected': 0.0
   },
   {
     'product_name': 'Adidas Supernova St',
@@ -58,6 +65,7 @@ List<Map<dynamic, dynamic>> adidas_Products = [
     'product_color': Color(0xffcacaca),
     'product_image':
         'http://cdn.shopify.com/s/files/1/0129/6942/products/BB3104_FTW_photo_side-lateral_transparent_1024x1024.png?v=1558458694',
+    'amount_selected': 0.0
   },
   {
     'product_name': 'Adidas Marquee Boost Low',
@@ -65,5 +73,6 @@ List<Map<dynamic, dynamic>> adidas_Products = [
     'product_color': Color(0xffd7b681),
     'product_image':
         'https://images.footlocker.com/is/image/EBFL2/D96932_a1?wid=1024&hei=1024&fmt=png-alpha',
+    'amount_selected': 0.0
   },
 ];

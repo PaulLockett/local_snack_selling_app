@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
                   Expanded(
                     child: ListView.builder(
                       scrollDirection: Axis.vertical,
-                      itemCount: adidas_Products.length,
+                      itemCount: adidasProducts.length,
                       itemBuilder: (ctx, i) {
                         return ProductContainer(id: i);
                       },

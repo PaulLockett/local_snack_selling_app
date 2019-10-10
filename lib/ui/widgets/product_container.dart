@@ -12,8 +12,13 @@ class ProductContainer extends StatefulWidget {
 
 class _ProductContainerState extends State<ProductContainer> {
   @override
+
+  void _changer(newRating){
+      setState(() => widget.sliderValue = newRating);
+  }
+  @override
   Widget build(BuildContext context) {
-    var _containerColor = adidas_Products[widget.id]['product_color'];
+    var _containerColor = adidasProducts[widget.id]['product_color'];
     return Container(
       height: MediaQuery.of(context).size.height / 3,
       margin: EdgeInsets.symmetric(vertical: 15.0, horizontal: 13.0),
@@ -28,7 +33,7 @@ class _ProductContainerState extends State<ProductContainer> {
               child: Padding(
                 padding: EdgeInsets.all(50.0),
                 child: Image.network(
-                  adidas_Products[widget.id]["product_image"],
+                  adidasProducts[widget.id]["product_image"],
                 ),
               ),
             ),
@@ -44,12 +49,12 @@ class _ProductContainerState extends State<ProductContainer> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            "${adidas_Products[widget.id]["product_name"]}",
+                            "${adidasProducts[widget.id]["product_name"]}",
                             style:
                                 TextStyle(color: Colors.white, fontSize: 21),
                           ),
                           Text(
-                            "${adidas_Products[widget.id]["product_price"]}",
+                            "${adidasProducts[widget.id]["product_price"]}",
                             style: TextStyle(color: Colors.white, fontSize: 21),
                           ),
                         ],
@@ -71,7 +76,7 @@ class _ProductContainerState extends State<ProductContainer> {
                       min: 0.0,
                       max: 15.0,
                       onChanged: (newRating) {
-                        setState(() => widget.sliderValue = newRating);
+                        _changer(newRating);
                       },
                       value: widget.sliderValue,
                     ),
