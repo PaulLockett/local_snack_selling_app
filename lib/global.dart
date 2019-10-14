@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-List<String> brands = ['Adidas', 'Nike', 'Reebook', 'Fila', 'Puma'];
-Color blue = Color(0xff2273cf), cyan = Color(0xff37d6ba);
 List<Map<dynamic, dynamic>> adidasProducts = [
   {
     'product_name': 'Skittles',
