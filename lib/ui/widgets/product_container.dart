@@ -3,7 +3,6 @@ import 'package:shopping_app/global.dart';
 
 class ProductContainer extends StatefulWidget {
   final int id;
-  double sliderValue = 0;
 
   ProductContainer({Key key, this.id}) : super(key: key);
   @override
@@ -11,11 +10,6 @@ class ProductContainer extends StatefulWidget {
 }
 
 class _ProductContainerState extends State<ProductContainer> {
-  @override
-
-  void _changer(newRating){
-      setState(() => widget.sliderValue = newRating);
-  }
   @override
   Widget build(BuildContext context) {
     var _containerColor = adidasProducts[widget.id]['product_color'];
@@ -62,34 +56,6 @@ class _ProductContainerState extends State<ProductContainer> {
                     ),
                   ],
                 ),
-              ),
-            ),
-            Positioned.fill(
-              top: 150.0, 
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Flexible(
-                    flex: 1,
-                    child: Slider(
-                      activeColor: Colors.indigoAccent,
-                      min: 0.0,
-                      max: 15.0,
-                      onChanged: (newRating) {
-                        _changer(newRating);
-                      },
-                      value: widget.sliderValue,
-                    ),
-                  ),
-
-                  // This is the part that displays the value of the slider.
-                  Container(
-                    width: 50.0,
-                    alignment: Alignment.center,
-                    child: Text('${widget.sliderValue.toInt()}',
-                        style: Theme.of(context).textTheme.display1),
-                  ),
-                ],
               ),
             ),
           ],

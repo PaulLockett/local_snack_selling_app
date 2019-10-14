@@ -8,9 +8,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Martsy',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
+      // theme: ThemeData(
+      //   primarySwatch: Colors.red,
+      // ),
       home: Home(),
     );
   }

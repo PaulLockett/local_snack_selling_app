@@ -21,7 +21,10 @@ class _HomeState extends State<Home> {
               child: Column(
                 children: <Widget>[
                   Container(
-                    color: Colors.amber,
+                    decoration: BoxDecoration(
+                      color: Colors.amber,
+                      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20))
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -59,7 +62,7 @@ class _HomeState extends State<Home> {
                         return ProductContainer(id: i);
                       },
                     ),
-                  )
+                  ),
                 ],
               ),
             )
