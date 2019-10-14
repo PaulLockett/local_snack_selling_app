@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 List<Map<dynamic, dynamic>> adidasProducts = [
   {
-    'product_name': 'Skittles',
+    'product_name': 'Doritos Nacho cheese',
     'product_price': 1.00,
     'product_color': Color(0xffdfd9c9),
     'product_image':
@@ -10,7 +10,7 @@ List<Map<dynamic, dynamic>> adidasProducts = [
     'amount_selected': 0.0  
   },
   {
-    'product_name': 'Adidas Supernova St',
+    'product_name': 'Skittles',
     'product_price': 120,
     'product_color': Color(0xffcacaca),
     'product_image':
@@ -18,7 +18,7 @@ List<Map<dynamic, dynamic>> adidasProducts = [
     'amount_selected': 0.0 
   },
   {
-    'product_name': 'Adidas Marquee Boost Low',
+    'product_name': 'Honeybuns',
     'product_price': 120,
     'product_color': Color(0xffd7b681),
     'product_image':
@@ -26,7 +26,7 @@ List<Map<dynamic, dynamic>> adidasProducts = [
     'amount_selected': 0.0 
   },
   {
-    'product_name': 'Adidas Adizero',
+    'product_name': 'Cake',
     'product_price': 120,
     'product_color': Color(0xffdfd9c9),
     'product_image':

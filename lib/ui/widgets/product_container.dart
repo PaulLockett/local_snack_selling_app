@@ -21,14 +21,61 @@ class _ProductContainerState extends State<ProductContainer> {
         borderRadius: BorderRadius.circular(35.0),
         color: _containerColor,
       ),
-      child: Stack(
-          children: <Widget>[
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Image.network(
-                  adidasProducts[widget.id]["product_image"],
-                ),
-            ),
+       child: Row(
+         crossAxisAlignment: CrossAxisAlignment.start,
+         children: <Widget>[
+           Image.asset('assets/Doritos_Nacho_cheese.png'
+           ),
+           Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text("${adidasProducts[widget.id]["product_name"]}",
+                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    textAlign: TextAlign.left,
+                    overflow: TextOverflow.clip,
+                  ),
+                  Text("${adidasProducts[widget.id]["product_name"]}",
+                    style: TextStyle(color: Colors.black38, fontSize: 12),
+                    textAlign: TextAlign.left,
+                    overflow: TextOverflow.clip,
+                  ),
+                ],
+              ),
+           ),
+           Expanded(
+             child: Column(
+               crossAxisAlignment: CrossAxisAlignment.end,
+               children: <Widget>[
+                 Text("\$2.00",
+                  style: TextStyle(color: Colors.black, fontSize: 25),
+                 ),
+                 RaisedButton(
+                   onPressed: (){},
+                    child: Text("Add to Cart"),
+                 )
+               ],
+             ),
+           )
+         ],
+       )
+       //Stack(
+      //     children: <Widget>[
+      //       Align(
+      //         alignment: Alignment.centerLeft,
+      //         child: Image.asset('assets/Doritos_Nacho_cheese.png'),
+      //       ),
+      //       Align(
+      //         alignment: Alignment.topCenter,
+      //         child: Padding(
+      //           padding: const EdgeInsets.only(left: 30),
+      //           child: Text(
+      //               "${adidasProducts[widget.id]["product_name"]}",
+      //               style: TextStyle(color: Colors.white, fontSize: 21),
+      //               textAlign: TextAlign.right,
+      //           ),
+      //         ),
+      //       ),
             // Align(
             //   alignment: Alignment.topLeft,
             //   child: Padding(
@@ -56,8 +103,8 @@ class _ProductContainerState extends State<ProductContainer> {
             //     ),
             //   ),
             // ),
-          ],
-        ),
+        //   ],
+        // ),
     );
   }
 }
