@@ -4,7 +4,7 @@ List<Map<dynamic, dynamic>> adidasProducts = [
   {
     'product_name': 'Doritos Nacho cheese',
     'product_price': 1.00,
-    'product_color': Color(0xffdfd9c9),
+    'product_color': Colors.red,
     'product_image':
         'https://images.footlocker.com/is/image/EBFL2/O2424001?wid=1024&hei=1024&fmt=png-alphag',
     'amount_selected': 0.0  
