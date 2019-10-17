@@ -19,13 +19,24 @@ class _ProductContainerState extends State<ProductContainer> {
       padding: EdgeInsets.all(15.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(35.0),
+        //border: Border.all(),
         color: _containerColor,
+        gradient: LinearGradient(
+          colors: [Colors.amber, _containerColor],
+          begin: Alignment.centerRight,
+          end:  Alignment.centerLeft,
+        ),
+        boxShadow: [
+          BoxShadow(
+           offset: Offset(5,5),
+           blurRadius: 5,
+          ),
+        ]
       ),
        child: Row(
          crossAxisAlignment: CrossAxisAlignment.start,
          children: <Widget>[
-           Image.asset('assets/Doritos_Nacho_cheese.png'
-           ),
+           Image.asset('assets/Doritos_Nacho_cheese.png'),
            Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,7 +61,12 @@ class _ProductContainerState extends State<ProductContainer> {
                  Text("\$2.00",
                   style: TextStyle(color: Colors.black, fontSize: 25),
                  ),
+                 Expanded(child: SizedBox()),
                  RaisedButton(
+                   color: Colors.blue,
+                   shape: RoundedRectangleBorder(
+                     borderRadius: BorderRadius.circular(20),
+                   ),
                    onPressed: (){},
                     child: Text("Add to Cart"),
                  )
