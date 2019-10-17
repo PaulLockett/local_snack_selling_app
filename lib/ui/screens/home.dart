@@ -15,6 +15,35 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.orange,
+          centerTitle: true,
+          title: Text("Snacks"),
+          leading: IconButton(
+            icon: Icon(
+              Icons.person,
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Profile()),
+              );
+            },
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.shopping_cart,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Cart()),
+                );
+              },
+            ),
+          ],
+        ),
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -28,43 +57,6 @@ class _HomeState extends State<Home> {
               Expanded(
                 child: Column(
                   children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20)),
-                        boxShadow: [
-                          BoxShadow(blurRadius: 5, offset: Offset(5,5))
-                        ]
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          IconButton(
-                              icon: Icon(
-                                Icons.person,
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => Profile()),
-                                );
-                              },
-                            ),
-                          Text("Snacks"),
-                          IconButton(
-                              icon: Icon(
-                                Icons.shopping_cart,
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => Cart()),
-                                );
-                              },
-                            ),
-                        ],
-                      ),
-                    ),
                     Expanded(
                       child: ListView.builder(
                         scrollDirection: Axis.vertical,

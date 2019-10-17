@@ -21,11 +21,11 @@ class _ProductContainerState extends State<ProductContainer> {
         borderRadius: BorderRadius.circular(35.0),
         //border: Border.all(),
         color: _containerColor,
-        gradient: LinearGradient(
-          colors: [Colors.amber, _containerColor],
-          begin: Alignment.centerRight,
-          end:  Alignment.centerLeft,
-        ),
+        // gradient: LinearGradient(
+        //   colors: [Colors.amber, _containerColor],
+        //   begin: Alignment.centerRight,
+        //   end:  Alignment.centerLeft,
+        // ),
         boxShadow: [
           BoxShadow(
            offset: Offset(5,5),
