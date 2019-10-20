@@ -4,6 +4,8 @@ import 'package:shopping_app/global.dart';
 import 'package:shopping_app/ui/screens/cart.dart';
 import 'package:shopping_app/ui/screens/profile.dart';
 import 'package:shopping_app/ui/widgets/product_container.dart';
+//TODO(): implement quick search buttions
+//import 'package:shopping_app/ui/widgets/section_container.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -15,6 +17,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.grey[200],
         appBar: AppBar(
           backgroundColor: Colors.orange,
           centerTitle: true,
@@ -45,30 +48,17 @@ class _HomeState extends State<Home> {
           ],
         ),
         body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.orange[400], Colors.orange[50]],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
-          child: Row(
+          child:Column(
             children: <Widget>[
               Expanded(
-                child: Column(
-                  children: <Widget>[
-                    Expanded(
-                      child: ListView.builder(
-                        scrollDirection: Axis.vertical,
-                        itemCount: adidasProducts.length,
-                        itemBuilder: (ctx, i) {
-                          return ProductContainer(id: i);
-                        },
-                      ),
-                    ),
-                  ],
+                child: ListView.builder(
+                  scrollDirection: Axis.vertical,
+                  itemCount: adidasProducts.length,
+                  itemBuilder: (ctx, i) {
+                    return ProductContainer(id: i);
+                  },
                 ),
-              )
+              ),
             ],
           ),
         ),
