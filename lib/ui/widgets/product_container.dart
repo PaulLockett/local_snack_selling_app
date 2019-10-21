@@ -10,9 +10,9 @@ class ProductContainer extends StatefulWidget {
 }
 //margin: EdgeInsets.symmetric(vertical: 15.0, horizontal: 13.0),
 class _ProductContainerState extends State<ProductContainer> {
+  var _counter = 0;
   @override
   Widget build(BuildContext context) {
-    //var _containerColor = adidasProducts[widget.id]['product_color'];
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Material(
@@ -20,48 +20,66 @@ class _ProductContainerState extends State<ProductContainer> {
         elevation: 1,
             child: Container(
               height: MediaQuery.of(context).size.height / 5,
-              padding: EdgeInsets.all(15.0),
+              //padding: EdgeInsets.all(15.0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20)
+                borderRadius: BorderRadius.circular(20),
+                gradient: LinearGradient(
+                  colors: [Colors.white, products[widget.id]["product_color"]]
+                ),
               ),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Image.asset('assets/Doritos_Nacho_cheese.png'),
+                  Flexible(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        transform: Matrix4.rotationZ(0.5),
+                        //alignment: Alignment.center,
+                        child: Image.asset(products[widget.id]["product_image"])
+                        ),
+                      ),
+                  ),
                   Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text("${adidasProducts[widget.id]["product_name"]}",
-                          style: TextStyle(color: Colors.black, fontSize: 20),
-                          textAlign: TextAlign.left,
-                          overflow: TextOverflow.clip,
-                        ),
-                        Text("${adidasProducts[widget.id]["product_name"]}",
-                          style: TextStyle(color: Colors.black38, fontSize: 12),
-                          textAlign: TextAlign.left,
-                          overflow: TextOverflow.clip,
-                        ),
-                      ],
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 15.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text("${products[widget.id]["product_name"]}",
+                            style: TextStyle(color: Colors.black, fontSize: 20),
+                            textAlign: TextAlign.left,
+                            overflow: TextOverflow.clip,
+                          ),
+                          Text("${products[widget.id]["product_name"]}",
+                            style: TextStyle(color: Colors.black38, fontSize: 12),
+                            textAlign: TextAlign.left,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: <Widget>[
-                        Text("\$2.00",
-                        style: TextStyle(color: Colors.black, fontSize: 25),
-                        ),
-                        Expanded(child: SizedBox()),
-                        RaisedButton(
-                          color: Colors.orange,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top:15.0, right:15.0, bottom:15.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: <Widget>[
+                          Text("\$${products[widget.id]["product_price"]}",
+                          style: TextStyle(color: Colors.black, fontSize: 25),
                           ),
-                          onPressed: (){},
-                          child: Text("Add to Cart",style: TextStyle(color: Colors.white),),
-                        )
-                      ],
+                          Expanded(child: SizedBox()),
+                          RaisedButton(
+                            color: Colors.black,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            onPressed: (){},
+                            child: Text("Add to Cart",style: TextStyle(color: Colors.white),),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],

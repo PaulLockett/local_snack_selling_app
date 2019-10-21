@@ -1,76 +1,68 @@
 import 'package:flutter/material.dart';
 
-List<Map<dynamic, dynamic>> adidasProducts = [
+List<Map<dynamic, dynamic>> products = [
   {
     'product_name': 'Doritos Nacho cheese',
-    'product_price': 1.00,
+    'product_price': '0.50',
     'product_color': Colors.red,
-    'product_image':
-        'https://images.footlocker.com/is/image/EBFL2/O2424001?wid=1024&hei=1024&fmt=png-alphag',
-    'amount_selected': 0.0  
-  },
-  {
-    'product_name': 'Skittles',
-    'product_price': 120,
-    'product_color': Color(0xffcacaca),
-    'product_image':
-        'http://cdn.shopify.com/s/files/1/0129/6942/products/BB3104_FTW_photo_side-lateral_transparent_1024x1024.png?v=1558458694',
-    'amount_selected': 0.0 
+    'product_image':'assets/Doritos_Nacho_cheese.png',
+    'amount_selected': 0
   },
   {
     'product_name': 'Honeybuns',
-    'product_price': 120,
-    'product_color': Color(0xffd7b681),
-    'product_image':
-        'https://images.footlocker.com/is/image/EBFL2/D96932_a1?wid=1024&hei=1024&fmt=png-alpha',
-    'amount_selected': 0.0 
+    'product_price': '1.00',
+    'product_color': Colors.yellow,
+    'product_image': 'assets/Honeybun.png',
+    'amount_selected': 0
   },
   {
-    'product_name': 'Cake',
-    'product_price': 120,
-    'product_color': Color(0xffdfd9c9),
-    'product_image':
-        'https://images.footlocker.com/is/image/EBFL2/O2424001?wid=1024&hei=1024&fmt=png-alpha',
-    'amount_selected': 0.0 
+    'product_name': 'Skittles',
+    'product_price': '1.00',
+    'product_color': Colors.red,
+    'product_image': 'assets/Skittles.png',
+    'amount_selected': 0
   },
   {
-    'product_name': 'Adidas Supernova St',
-    'product_price': 120,
-    'product_color': Color(0xffcacaca),
+    'product_name': 'Powerade',
+    'product_price': '1.00',
+    'product_color': Colors.blue,
     'product_image':
-        'http://cdn.shopify.com/s/files/1/0129/6942/products/BB3104_FTW_photo_side-lateral_transparent_1024x1024.png?v=1558458694',
-    'amount_selected': 0.0 
+        'assets/Powerade.png',
+    'amount_selected': 0
   },
   {
-    'product_name': 'Adidas Marquee Boost Low',
-    'product_price': 120,
-    'product_color': Color(0xffd7b681),
-    'product_image':
-        'https://images.footlocker.com/is/image/EBFL2/D96932_a1?wid=1024&hei=1024&fmt=png-alpha',
-    'amount_selected': 0.0 
+    'product_name': 'Shrimp Ramen',
+    'product_price': '0.75',
+    'product_color': Colors.pink,
+    'product_image': 'assets/shrimp_ramen.png',
+    'amount_selected': 0
   },
   {
-    'product_name': 'Adidas Adizero',
-    'product_price': 120,
-    'product_color': Color(0xffdfd9c9),
-    'product_image':
-        'https://images.footlocker.com/is/image/EBFL2/O2424001?wid=1024&hei=1024&fmt=png-alpha',
-    'amount_selected': 0.0
+    'product_name': 'Chicken Ramen',
+    'product_price': '0.75',
+    'product_color': Colors.yellow,
+    'product_image': 'assets/Chicken_ramen.png',
+    'amount_selected': 0
   },
   {
-    'product_name': 'Adidas Supernova St',
-    'product_price': 120,
-    'product_color': Color(0xffcacaca),
-    'product_image':
-        'http://cdn.shopify.com/s/files/1/0129/6942/products/BB3104_FTW_photo_side-lateral_transparent_1024x1024.png?v=1558458694',
-    'amount_selected': 0.0
+    'product_name': 'Hot Fries',
+    'product_price': '0.50',
+    'product_color': Colors.red,
+    'product_image': 'assets/hot_fries.png',
+    'amount_selected': 0
   },
   {
-    'product_name': 'Adidas Marquee Boost Low',
-    'product_price': 120,
-    'product_color': Color(0xffd7b681),
-    'product_image':
-        'https://images.footlocker.com/is/image/EBFL2/D96932_a1?wid=1024&hei=1024&fmt=png-alpha',
-    'amount_selected': 0.0
+    'product_name': 'water bottle',
+    'product_price': '0.50',
+    'product_color': Colors.lightBlue,
+    'product_image': 'assets/water_bottle.png',
+    'amount_selected': 0
+  },
+  {
+    'product_name': 'Sour Punch Strawberry Straws',
+    'product_price': '0.75',
+    'product_color': Colors.red,
+    'product_image': 'assets/sour_punch_straws.png',
+    'amount_selected': 0
   },
 ];

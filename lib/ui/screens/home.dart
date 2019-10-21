@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
-          backgroundColor: Colors.orange,
+          backgroundColor: Colors.black,
           centerTitle: true,
           title: Text("Snacks"),
           leading: IconButton(
@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
               Expanded(
                 child: ListView.builder(
                   scrollDirection: Axis.vertical,
-                  itemCount: adidasProducts.length,
+                  itemCount: products.length,
                   itemBuilder: (ctx, i) {
                     return ProductContainer(id: i);
                   },
