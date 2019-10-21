@@ -10,7 +10,6 @@ class ProductContainer extends StatefulWidget {
 }
 //margin: EdgeInsets.symmetric(vertical: 15.0, horizontal: 13.0),
 class _ProductContainerState extends State<ProductContainer> {
-  var _counter = 0;
   @override
   Widget build(BuildContext context) {
     return Padding(
