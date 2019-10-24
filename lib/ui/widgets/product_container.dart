@@ -34,7 +34,7 @@ class _ProductContainerState extends State<ProductContainer> {
                     borderRadius: BorderRadius.circular(20),
                       child: Container(
                         transform: Matrix4.rotationZ(0.5),
-                        //alignment: Alignment.center,
+                        alignment: Alignment.bottomLeft,
                         child: Image.asset(products[widget.id]["product_image"])
                         ),
                       ),
@@ -70,12 +70,13 @@ class _ProductContainerState extends State<ProductContainer> {
                           ),
                           Expanded(child: SizedBox()),
                           RaisedButton(
+                            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                             color: Colors.black,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
                             onPressed: (){},
-                            child: Text("Add to Cart",style: TextStyle(color: Colors.white),),
+                            child: Text("Add to cart",style: TextStyle(color: Colors.white),),
                           )
                         ],
                       ),
